@@ -1,0 +1,134 @@
+@heightHeaderTop: 58px;
+@heightHeaderBottom: 52px;
+#header {
+  padding: 0 32px;
+  border-bottom: 1px solid #dbdee6;
+  .header--top {
+    width: 100%;
+    height: @heightHeaderTop;
+  }
+  .header--top--left {
+    flex: 1;
+    ul {
+      width: 100%;
+    }
+  }
+  .header--name {
+    flex: 1;
+    .icon--name {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .header--top--right {
+    flex: 1;
+    .header--lang {
+      a {
+        padding: 0 12px;
+        display: block;
+        position: relative;
+      }
+      li + li a::before {
+        content: "";
+        position: absolute;
+        height: 12px;
+        border-left: 1px solid @color-border;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100%;
+      }
+    }
+
+    .header--icon {
+      color: @icon-color;
+      li,
+      a {
+        height: 100%;
+      }
+      li + li a {
+        margin-left: 25px;
+      }
+      &--search {
+        position: relative;
+        width: 1.5rem;
+        .icon--search {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .icon--vt3 {
+          position: absolute;
+          top: 64%;
+          left: 84%;
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+      }
+      .icon--user {
+        display: inline-block;
+        position: relative;
+        width: 1.7rem;
+        height: 100%;
+        &--top {
+          position: absolute;
+          width: 0.9rem;
+          height: 0.9rem;
+          top: 2.5px;
+          left: 8.5px;
+          transform: translateX(-50%);
+        }
+
+        &--bottom {
+          position: absolute;
+          width: 1.7rem;
+          height: 0.85rem;
+          top: 53%;
+        }
+      }
+
+      .icon--heart {
+        position: relative;
+        top: 10%;
+        width: 1.9rem;
+        height: 1.7rem;
+      }
+
+      &--bag {
+        display: inline-block;
+        position: relative;
+        width: 1.3rem;
+        height: 100%;
+        &--top {
+          position: absolute;
+          top: 10%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0.6rem;
+          height: 0.7rem;
+        }
+        &--down {
+          position: absolute;
+          bottom: 10%;
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+    }
+  }
+
+  //   phan header nav phia duoi
+  .header--bottom {
+    height: @heightHeaderBottom;
+    ul {
+      height: 100%;
+      a {
+        display: inline-block;
+        padding: 0 40px;
+        font-weight: 500;
+        line-height: @line-height;
+      }
+      li:first-child a {
+        padding-left: 0;
+      }
+    }
+  }
+}
