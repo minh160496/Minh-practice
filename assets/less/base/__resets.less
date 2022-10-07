@@ -14,7 +14,8 @@ body {
   background-color: @color-background;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -24,17 +25,51 @@ li {
   padding: 0;
 }
 
-ol {
-  margin: 0;
-  padding: 0;
-}
-
 button {
   cursor: pointer;
+  border: none;
 }
 
 a {
   text-decoration: none;
   color: @text-color;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p + p {
+  margin-top: 32px;
+}
+
+h1 {
+  line-height: @line-height;
+}
+
+h2 {
+  font-size: @font-h2;
+  line-height: @line-height-120;
+}
+
+h3 {
+  font-size: @font-h3;
+}
+
+img {
+  border-radius: @radius-s;
+}
+
+input {
+  border: none;
+  outline: none;
+  cursor: text;
 }

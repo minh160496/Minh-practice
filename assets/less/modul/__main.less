@@ -1,74 +1,656 @@
 #main {
   padding-top: 25px;
-  .main__container {
-    padding: 0 32px;
+}
+// phan category
+.main__category {
+  margin-top: 140px;
+  padding: 0 32px;
+  h2 {
+    font-size: @font-h2;
   }
-  .main__title {
-    .main__nav--list {
-      li:first-child a {
-        padding-left: 0 !important;
-      }
-      a {
-        padding: 0 10px;
-        .icon {
-          width: 0.5rem;
-          height: 0.6rem;
+
+  ul {
+    width: 37.5rem;
+    height: 4.4rem;
+    border-bottom: 1px solid @color-border;
+    li {
+      display: grid;
+      place-content: center;
+      width: 12.5rem;
+
+      &:last-child {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-bottom: 2px solid @color-red;
         }
       }
     }
-    .main__title--content {
-      max-width: 466px;
-      margin-top: 120px;
-      h1 {
-        font-size: @font-h1;
-        line-height: 100%;
+  }
+  // phan product
+  &--product {
+    margin-top: 16px;
+    a {
+      display: flex;
+    }
+    .product__item {
+      position: relative;
+      h3 {
+        font-size: @font-h3;
+        color: @color-category-product;
+        position: relative;
+        left: 24px;
+      }
+      .here {
+        color: @text-color !important;
+      }
+
+      img {
+        width: 50%;
+      }
+      .icon {
+        position: absolute;
+        left: -@gap-s;
+        bottom: 0;
+        width: 2.7rem;
+        height: 2.7rem;
+      }
+    }
+  }
+  // phan duoi cua main__category
+  &--extends {
+    margin-top: 140px;
+    align-items: end;
+    img:first-child {
+      width: calc(100% - 32px);
+      height: auto;
+      padding-right: 70px;
+    }
+    .category--extends--desc {
+      max-width: 370px;
+      height: 100%;
+      margin: 0 40px 0 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: @font-h2;
+        line-height: @line-height-120;
+        margin-bottom: 32px;
       }
 
       p {
         font-size: @font-desc;
         line-height: @line-height;
+        margin: 0;
         text-align: justify;
       }
     }
-    .main__title--list {
-      max-width: 466px;
-      border-top: 1px solid @color-border;
-      a {
-        display: inline-block;
+
+    .category--extends--right {
+      display: flex;
+      flex-direction: row-reverse;
+      position: relative;
+      .rectangle {
+        position: absolute;
+        top: -58%;
+        left: 77%;
+      }
+      img {
+        width: 55%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// phan best seller
+.main--best {
+  margin-top: 140px;
+  padding: 0 32px;
+  h2 {
+    margin: 0;
+  }
+  &--product {
+    margin-top: 4rem;
+    .product--item__img {
+      position: relative;
+      width: 100%;
+      img {
         width: 100%;
         height: 100%;
-        padding: 18px 0;
+      }
+      .icon--heart {
+        width: 1.6rem;
+        height: 1.4rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .icon--diamon {
+        width: 2rem;
+        height: 1.2rem;
+        position: absolute;
+        bottom: 14px;
+        left: 10px;
+      }
+    }
+
+    .product--item__inf {
+      padding: 0 12px;
+      p:first-child {
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      p:last-child {
         font-weight: 700;
-        border-bottom: 1px solid @color-border;
-        .icon {
-          width: 10px;
-          height: 10px;
-          float: right;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+// phan shop jewell
+.main--shop-jewell {
+  position: relative;
+  margin: 160px 0 300px;
+  padding: 0 32px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .shop-jewell__apply {
+    position: absolute;
+    width: 66%;
+    height: 300px;
+    background-color: @color-white;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid @color-blur;
+    border-radius: @radius-s;
+    &--inf {
+      max-width: 65%;
+      padding-left: 80px;
+      h2 {
+        margin-bottom: 17px;
+      }
+      p {
+        margin-bottom: 24px;
+        font-weight: 500;
+      }
+    }
+    .icon--vt15 {
+      width: 62px;
+      height: 62px;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+    }
+
+    .icon--vt14 {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: -18px;
+      bottom: -18px;
+    }
+  }
+}
+
+// phan banner
+.main__banner {
+  background-color: @background-toppic-red;
+  margin-top: 160px;
+  padding: 0 32px;
+  &__img {
+    flex: 1;
+    img {
+      max-width: 700px;
+    }
+  }
+  &--desc {
+    flex: 1;
+    padding-left: 32px;
+    div {
+      max-width: 300px;
+    }
+    h2 {
+      color: @color-white;
+      margin: 0 0 24px;
+    }
+    p {
+      color: @color-white;
+      margin-bottom: 24px;
+    }
+    .btn--sub {
+      background-color: @color-white;
+      padding: 16px 100px;
+      font-weight: 700;
+    }
+  }
+}
+
+// phan mainrings
+.main__rings {
+  margin-top: 260px;
+  padding: 0 32px;
+  gap: @gap-xl;
+  &--desc {
+    .rectangle {
+      margin-bottom: 180px;
+      transform: rotateY(180deg);
+    }
+  }
+  &__img {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      filter: brightness(80%);
+    }
+    .rings__img--inf {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-bottom: 20px;
+      h1 {
+        font-size: @font-20;
+        color: @color-white;
+        min-width: 300px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// phan best sellers only with 2img
+.best-sellers__group {
+  padding: 0 32px;
+  h2 {
+    margin: 0 0 24px 0;
+  }
+  .best-sellers__group__img {
+    gap: @gap-xl;
+    img {
+      width: 100%;
+    }
+    p {
+      font-weight: 700;
+      line-height: @line-height-120;
+    }
+  }
+}
+
+// phan category chains
+img.chains {
+  display: block;
+  position: relative;
+  right: 32%;
+  width: 100% !important;
+  height: auto;
+  z-index: -1;
+}
+
+// phan rings video
+.main__video {
+  padding: 0 32px;
+  &--desc {
+    min-width: 290px;
+    padding-right: 24px;
+  }
+  &--right {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .icon--ractangle {
+      position: absolute;
+      left: -7px;
+      bottom: -1px;
+      z-index: -1;
+      width: 300px;
+      height: 300px;
+    }
+    .icon--play {
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+      width: 160px;
+      height: 160px;
+    }
+    .icon--elip {
+      width: 100%;
+      height: 100%;
+    }
+
+    .icon--video {
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+// phan set voi topic
+.main__set__topic {
+  background-color: @light-pink;
+  padding: 0 32px;
+  &--left {
+    img {
+      width: 100%;
+      padding-bottom: 240px;
+    }
+  }
+  .rectangle--set--topic {
+    transform: rotateZ(180deg);
+  }
+  &--desc {
+    .form--desc__set {
+      max-width: 42rem;
+      padding-left: 36px;
+    }
+    li {
+      a {
+        .wrap--icon {
+          position: relative;
+          width: 56px;
+          height: 56px;
+          background-color: @color-blur-bold;
+          .icon--round {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.9rem;
+            height: 0.9rem;
+          }
+          .icon--set {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2.9rem;
+            height: 2.9rem;
+          }
+        }
+        .list__title {
+          padding-left: 16px;
+          max-width: 30rem;
+          p {
+            font-weight: @bold;
+          }
+
+          span {
+            font-weight: 500;
+          }
         }
       }
     }
   }
-  .main__img--banner {
-    position: relative;
+  &--right {
+    max-width: 626px;
     img {
-      width: 100%;
-      min-height: 550px;
-      float: right;
-    }
-    .icon--vt15 {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 62px;
-      height: 62px;
-    }
-
-    .icon--vt14 {
-      position: absolute;
-      bottom: -12px;
-      left: -12px;
-      width: 32px;
-      height: 32px;
+      height: 100%;
     }
   }
+}
+
+// phan best seller cua rings
+.main__best--rings--wrap {
+  position: relative;
+  h2 {
+    margin: 0;
+    padding-left: 32px;
+  }
+  .main__best--rings {
+    padding: 0 32px;
+    background-color: @color-blur;
+    .icon--top,
+    .icon--container {
+      position: absolute;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    .icon--container {
+      right: 32px;
+      top: 20%;
+    }
+    .icon--top {
+      transform: rotate(-180deg);
+      left: 35%;
+      top: -32px;
+    }
+  }
+}
+
+// phan van ban khong read
+.main__desc {
+  padding: 0 32px;
+  display: grid;
+  column-gap: 70px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  &__title {
+    grid-column: 1 / 3;
+    h2 {
+      max-width: 700px;
+      margin: 0 0 18px 0;
+    }
+  }
+  p {
+    font-weight: 500;
+  }
+}
+
+// phan main voi title
+.main__title {
+  padding-left: 32px;
+  &__head {
+    padding-right: 32px;
+    margin-bottom: 26px;
+    h2 {
+      margin: 0;
+    }
+    a {
+      line-height: @line-height-120;
+      font-weight: @bold;
+    }
+  }
+  &__img {
+    position: relative;
+    .image--3 {
+      max-width: 1100px;
+    }
+    .image--4 {
+      max-width: 600px;
+      margin-left: 32px;
+    }
+
+    img {
+      width: 100%;
+    }
+    img:nth-child(2) {
+      padding-right: 30px;
+    }
+    .prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -41px;
+    }
+    .next {
+      position: absolute;
+      top: 50%;
+      right: 32px;
+      transform: translateY(-50%);
+    }
+  }
+  // phan position
+  .position {
+    .icon--pos {
+      cursor: pointer;
+      width: 4px;
+      height: 4px;
+      padding: 0 2px;
+    }
+  }
+}
+
+// phan list benefits
+.main__benefits {
+  padding: 0 32px;
+  &__list {
+    gap: 24px;
+  }
+  &__list__item {
+    position: relative;
+    background-color: @light-pink;
+    min-width: 200px;
+    .list__item--wrap {
+      padding: 34px 24px;
+    }
+    .icon {
+      width: 52px;
+      height: 52px;
+      position: relative;
+      &--set {
+        width: 100%;
+        height: 100%;
+      }
+      &--round {
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    h6,
+    p {
+      font-size: @font-primary;
+      max-width: 208px;
+    }
+    .icon--vt15 {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// phan phan best seller with 2 img and icon next
+.best-sellers__group--with--icon {
+  .best-sellers__group__img--link {
+    display: block;
+    position: relative;
+    .prev--best {
+      position: absolute;
+      top: 50%;
+      left: -41px;
+      transform: translateY(-50%);
+    }
+    .next--best {
+      position: absolute;
+      right: -21px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// phan best-sellers--with--4img
+.best-sellers--with--4img {
+  h1 {
+    margin-top: 10px;
+    font-size: @font-20;
+    max-inline-size: 366px;
+  }
+  .image--4__title {
+    max-block-size: 470px;
+    max-inline-size: 55px;
+    overflow: hidden;
+    h1 {
+      margin-right: -200px;
+    }
+  }
+  .prev--best--4img,
+  .next--best--4img {
+    top: 42%;
+  }
+}
+
+// phan contact main
+.main__contact {
+  position: relative;
+  background-color: @text-color;
+  .rectangle__contact {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    transform: rotate(180deg);
+  }
+  &--central {
+    padding: 70px 0;
+    h2 {
+      color: @color-white;
+      font-size: @font-20;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    p {
+      color: @color-white;
+      margin-bottom: 20px;
+    }
+    &--mail {
+      height: 40px;
+      width: 100%;
+      border: 1px solid @color-border;
+      input {
+        height: 100%;
+        width: 100%;
+        padding-left: 16px;
+      }
+      .btn--input {
+        background-color: @color-red;
+        width: 40px;
+        height: 40px;
+        .icon {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+  }
+}
+
+// phan main read chuan seo
+.main__read {
+  position: relative;
+}
+.main__read--blur {
+  display: grid;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 30px);
+  z-index: 2;
+  background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 91.21%);
 }
