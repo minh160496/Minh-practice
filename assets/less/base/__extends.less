@@ -313,3 +313,33 @@
     right: 33%;
   }
 }
+
+// icon home menu
+.icon__home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  .icon {
+    width: 25px;
+    height: 2px;
+  }
+}
+
+// icon search
+.header--icon--search {
+  position: relative;
+  width: 1.5rem;
+  cursor: pointer;
+  .icon--search {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .icon--vt3 {
+    position: absolute;
+    top: 64%;
+    left: 84%;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}

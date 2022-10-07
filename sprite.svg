@@ -198,4 +198,8 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Star 5">
     <path d="M4 0L5.34015 2.15544L7.80423 2.76393L6.16841 4.70456L6.35114 7.23607L4 6.28L1.64886 7.23607L1.83159 4.70456L0.195774 2.76393L2.65985 2.15544L4 0Z" fill="#374454"></path>
   </symbol>
+
+   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 2" id="Rectangle home">
+    <rect x="0.600098" width="16.8" height="1.2" fill="#2D2D2D"></rect>
+  </symbol>
 </svg>
