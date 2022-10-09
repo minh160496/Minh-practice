@@ -654,3 +654,27 @@ img.chains {
   z-index: 2;
   background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 91.21%);
 }
+
+// phan responsive
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1023px) {
+  .main__category {
+    ul {
+      width: 100%;
+      li {
+        width: 33.33333%;
+      }
+    }
+
+    &--product {
+      .product__item {
+        min-inline-size: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}
