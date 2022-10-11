@@ -74,28 +74,28 @@
     .icon--heart {
       position: relative;
       top: 10%;
-      width: 2rem;
-      height: 1.9rem;
+      width: 20px;
+      height: 19px;
     }
 
     &--bag {
       display: inline-block;
       position: relative;
-      width: 1.6rem;
+      width: 16px;
       height: 100%;
       &--top {
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 1.6rem;
-        height: 0.8rem;
+        width: 16px;
+        height: 8px;
       }
       &--down {
         position: absolute;
         bottom: 10%;
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 16px;
+        height: 16px;
       }
     }
   }
@@ -235,7 +235,7 @@
 
 // phan banner
 .banner {
-  padding: 0 32px;
+  padding: 0 @padding-main;
 }
 .banner__title {
   max-width: 466px;
@@ -288,7 +288,6 @@
   position: relative;
   img {
     width: 100%;
-    min-height: 550px;
     float: right;
   }
   .icon--vt15 {
@@ -377,4 +376,17 @@
 }
 
 @media (max-width: 768px) {
+  // cho logo nho hon
+  .header--name {
+    .icon--name {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+  // cho icon bag gan icon heart hon
+  .header--top--right {
+    .header--icon li + li a {
+      margin-left: 16px;
+    }
+  }
 }
