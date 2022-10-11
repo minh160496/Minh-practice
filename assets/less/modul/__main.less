@@ -166,8 +166,8 @@
   }
   .shop-jewell__apply {
     position: absolute;
-    width: 66%;
-    height: 300px;
+    inline-size: 66%;
+    block-size: 300px;
     background-color: @color-white;
     top: 100%;
     left: 50%;
@@ -175,7 +175,7 @@
     border: 4px solid @color-blur;
     border-radius: @radius-s;
     &--inf {
-      max-width: 65%;
+      max-inline-size: 80%;
       padding-left: 80px;
       h2 {
         margin-bottom: 17px;
@@ -209,14 +209,11 @@
   margin-top: 160px;
   padding: 0 32px;
   &__img {
-    flex: 1;
     img {
-      max-width: 700px;
+      width: 80%;
     }
   }
   &--desc {
-    flex: 1;
-    padding-left: 32px;
     div {
       max-width: 300px;
     }
@@ -257,13 +254,12 @@
     .rings__img--inf {
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 10%;
       padding-bottom: 20px;
       h1 {
         font-size: @font-20;
         color: @color-white;
-        min-width: 300px;
+        min-inline-size: 300px;
         margin: 0;
       }
     }
@@ -292,7 +288,7 @@
 img.chains {
   display: block;
   position: relative;
-  right: 32%;
+  right: -10%;
   width: 100% !important;
   height: auto;
   z-index: -1;
@@ -306,16 +302,21 @@ img.chains {
     padding-right: 24px;
   }
   &--right {
+    width: 100%;
+    min-height: 600px;
     position: relative;
     img {
-      width: 100%;
       height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
     }
     .icon--ractangle {
       position: absolute;
       left: -7px;
-      bottom: -1px;
-      z-index: -1;
+      bottom: -7px;
+      z-index: 0;
       width: 300px;
       height: 300px;
     }
@@ -323,6 +324,7 @@ img.chains {
       position: absolute;
       left: 50%;
       bottom: 50%;
+      z-index: 3;
       transform: translate(-50%, 50%);
       width: 160px;
       height: 160px;
@@ -417,6 +419,9 @@ img.chains {
   .main__best--rings {
     padding: 0 32px;
     background-color: @color-blur;
+    img {
+      width: 100%;
+    }
     .icon--top,
     .icon--container {
       position: absolute;
@@ -470,20 +475,20 @@ img.chains {
   }
   &__img {
     position: relative;
-    .image--3 {
-      max-width: 1100px;
+    overflow: hidden;
+    .image {
+      min-width: 800px;
+      img {
+        width: 100%;
+      }
+      img:nth-child(2) {
+        padding-right: 30px;
+      }
     }
-    .image--4 {
-      max-width: 600px;
+    .image + .image {
       margin-left: 32px;
     }
 
-    img {
-      width: 100%;
-    }
-    img:nth-child(2) {
-      padding-right: 30px;
-    }
     .prev {
       position: absolute;
       top: 50%;
@@ -576,22 +581,33 @@ img.chains {
 
 // phan best-sellers--with--4img
 .best-sellers--with--4img {
-  h1 {
-    margin-top: 10px;
-    font-size: @font-20;
-    max-inline-size: 366px;
+  width: 100%;
+  .main__title__head {
+    padding-right: 64px;
   }
-  .image--4__title {
-    max-block-size: 470px;
-    max-inline-size: 55px;
+  .main__title__img {
+    width: 100%;
     overflow: hidden;
-    h1 {
-      margin-right: -200px;
+    .image {
+      min-width: 400px;
+      img {
+        width: 100%;
+      }
     }
-  }
-  .prev--best--4img,
-  .next--best--4img {
-    top: 42%;
+
+    .image + .image {
+      margin-left: 32px;
+    }
+    h1 {
+      margin-top: 10px;
+      font-size: @font-20;
+      max-inline-size: 366px;
+    }
+
+    .prev--best--4img,
+    .next--best--4img {
+      top: 42%;
+    }
   }
 }
 
@@ -660,6 +676,7 @@ img.chains {
 }
 
 @media (max-width: 1023px) {
+  // phan category
   .main__category {
     ul {
       width: 100%;
@@ -671,6 +688,112 @@ img.chains {
     &--product {
       .product__item {
         min-inline-size: 300px;
+      }
+    }
+    &--extends {
+      .category--extends--desc {
+        max-width: 100%;
+      }
+      .category--extends--right {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // phan best seller
+  .main--best {
+    &--product {
+    }
+  }
+
+  // phan shop jewell
+  .main--shop-jewell {
+    .shop-jewell__apply {
+      inline-size: 100%;
+      position: unset;
+      transform: none;
+      &--inf {
+        max-inline-size: 100%;
+        padding-left: 0;
+      }
+    }
+
+    .icon--vt15,
+    .icon--vt14 {
+      display: none;
+    }
+  }
+
+  // phan banner
+  .main__banner {
+    &__img {
+      img {
+        min-inline-size: 100%;
+      }
+    }
+    &--desc {
+      padding-left: 32px;
+      div {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // phan mainrings
+  .main__rings {
+    &--desc {
+      .rectangle {
+        display: none;
+      }
+    }
+  }
+
+  // phan best seller cua rings
+  .main__best--rings--wrap {
+    .main__best--rings {
+      .icon {
+        display: none;
+      }
+    }
+  }
+
+  // phan van ban khong read
+  .main__desc {
+    display: unset;
+  }
+
+  // phan main voi title
+  .main__title {
+    &__img {
+      position: relative;
+      width: 100%;
+      .image--3 {
+        min-width: 500px;
+      }
+      .image--4 {
+        min-width: 282px;
+        margin-left: 32px;
+      }
+
+      img {
+        width: 100%;
+      }
+      img:nth-child(2) {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  // phan best-sellers--with--4img
+  .best-sellers--with--4img {
+    .main__title__img {
+      .image {
+        img {
+          min-width: 350px;
+          width: 100%;
+        }
       }
     }
   }

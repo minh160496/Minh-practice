@@ -1,5 +1,7 @@
 .app {
   width: 100%;
+  max-width: 2056px;
+  margin: 0 auto;
   background-color: @color-blur;
 }
 
@@ -74,6 +76,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.grid.l-8-4 {
+  grid-template-columns: 2fr 1fr;
+}
+
 .grid.l-2-5-5 {
   grid-template-columns: 2fr 5fr 5fr;
 }
@@ -116,6 +122,10 @@
 
 .row .col.l-12 {
   width: 100%;
+}
+
+.row.col-end {
+  justify-content: flex-end;
 }
 
 .mt-12 {

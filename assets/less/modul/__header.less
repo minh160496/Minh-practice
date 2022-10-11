@@ -31,10 +31,24 @@
       }
     }
   }
+  .header__icon--mobile {
+    .icon__home {
+      padding-right: 16px;
+    }
+    .acount {
+      .icon--user {
+        margin-right: 12px;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
 }
 // phan ten glamira
 .header--name {
   flex: 1;
+  max-width: 800px;
   .icon--name {
     width: 3rem;
     height: 3rem;
@@ -44,7 +58,6 @@
 .header--top--right {
   flex: 1;
   .header--lang {
-    padding-left: 20%;
     a {
       padding: 0 12px;
       display: block;
@@ -75,54 +88,41 @@
     li + li a {
       margin-left: 25px;
     }
-    .icon--user {
-      display: inline-block;
-      position: relative;
-      width: 1.7rem;
-      height: 100%;
-      &--top {
-        position: absolute;
-        width: 0.9rem;
-        height: 0.9rem;
-        top: 10%;
-        left: 49.3%;
-        transform: translateX(-50%);
-      }
-
-      &--bottom {
-        position: absolute;
-        width: 1.7rem;
-        height: 0.85rem;
-        top: 53%;
-      }
-    }
 
     .icon--heart {
       position: relative;
       top: 10%;
-      width: 1.9rem;
-      height: 1.7rem;
+      width: 2rem;
+      height: 1.9rem;
     }
 
     &--bag {
       display: inline-block;
       position: relative;
-      width: 1.3rem;
+      width: 1.6rem;
       height: 100%;
       &--top {
         position: absolute;
-        top: 10%;
-        left: 49%;
+        top: 0;
+        left: 50%;
         transform: translateX(-50%);
-        width: 0.6rem;
-        height: 0.7rem;
+        width: 1.6rem;
+        height: 0.8rem;
       }
       &--down {
         position: absolute;
         bottom: 10%;
-        width: 1.3rem;
-        height: 1.3rem;
+        width: 1.6rem;
+        height: 1.6rem;
       }
+    }
+  }
+  .header--close {
+    cursor: pointer;
+    // display: none;
+    .icon--close {
+      inline-size: 12px;
+      block-size: 12px;
     }
   }
 }
@@ -145,6 +145,27 @@
       padding-left: 0;
     }
   }
+}
+
+// phan header nav mobile
+.header__nav--mobile {
+  .header__nav--mobile__title {
+    li {
+      font-size: @font-12;
+      font-weight: 500;
+      line-height: @line-height-120;
+      padding: 10px 0;
+      cursor: pointer;
+      p {
+        max-inline-size: 82px;
+      }
+    }
+  }
+}
+// phan duoi cua menu mobile khi click vao menu
+.header__sub--mobile {
+  padding: 0 20px;
+  display: none;
 }
 
 // phan banner
@@ -235,6 +256,21 @@
 }
 
 @media (max-width: 1023px) {
+  #header {
+    background-color: @color-white;
+    padding: 0 20px;
+    min-block-size: @heightHeaderTop; //phan header co chieu cao bang header top
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .header--bottom {
+    display: none; //cho hidden phan header duoi
+  }
+
   .header--top--left ul {
     display: none;
   }
@@ -243,8 +279,13 @@
     .header--lang {
       display: none;
     }
+    .header--top--right__icon {
+      inline-size: 100%;
+      flex-direction: row-reverse;
+    }
 
     .header--icon {
+      inline-size: 100%;
       .icon--user {
         display: none;
       }

@@ -5,7 +5,22 @@
   .grid.m-12 {
     grid-template-columns: 1fr;
   }
+
+  .grid.m-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .row .col.m-12 {
+    inline-size: 100%;
+  }
 }
 
 @media (max-width: 768px) {
+  .grid.c-12 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.c-6 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
