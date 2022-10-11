@@ -63,11 +63,17 @@ input {
 .border {
   border: 2px solid #dbdee6;
 }
+.border-s {
+  border: 1px solid #dbdee6;
+}
 .border--top {
   border-top: 2px solid #dbdee6;
 }
 .border--bottom {
   border-bottom: 2px solid #dbdee6;
+}
+.border--bottom-s {
+  border-bottom: 1px solid #dbdee6;
 }
 .border--radius {
   border-radius: 2px;
@@ -534,6 +540,9 @@ input {
 .mt-210 {
   margin-top: 210px;
 }
+.mt-250 {
+  margin-top: 250px;
+}
 @media (min-width: 769px) and (max-width: 1023px) {
   .grid.m-12 {
     grid-template-columns: 1fr;
@@ -541,8 +550,23 @@ input {
   .grid.m-6 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid.m-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .row .col.m-12 {
     inline-size: 100%;
+  }
+  .mt-12-m {
+    margin-top: 12px;
+  }
+  .mt-20-m {
+    margin-top: 20px;
+  }
+  .mt-60-m {
+    margin-top: 60px;
+  }
+  .mt-80-m {
+    margin-top: 80px;
   }
 }
 @media (max-width: 768px) {
@@ -551,6 +575,21 @@ input {
   }
   .grid.c-6 {
     grid-template-columns: 1fr 1fr;
+  }
+  .grid.c-4 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .mt-12-c {
+    margin-top: 12px;
+  }
+  .mt-20-c {
+    margin-top: 20px;
+  }
+  .mt-60-c {
+    margin-top: 60px;
+  }
+  .mt-80-c {
+    margin-top: 80px;
   }
 }
 #header {
@@ -603,23 +642,6 @@ input {
 .header--top--right {
   flex: 1;
 }
-.header--top--right .header--lang a {
-  padding: 0 12px;
-  display: block;
-  position: relative;
-}
-.header--top--right .header--lang li + li a::before {
-  content: "";
-  position: absolute;
-  height: 12px;
-  border-left: 1px solid #dbdee6;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 100%;
-}
-.header--top--right .header--lang li:first-child a {
-  opacity: 0.6;
-}
 .header--top--right .header--icon {
   width: 200px;
   justify-content: flex-end;
@@ -658,12 +680,22 @@ input {
   width: 1.6rem;
   height: 1.6rem;
 }
-.header--top--right .header--close {
-  cursor: pointer;
+.header--lang a {
+  padding: 0 12px;
+  display: block;
+  position: relative;
 }
-.header--top--right .header--close .icon--close {
-  inline-size: 12px;
-  block-size: 12px;
+.header--lang li + li a::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  border-left: 1px solid #dbdee6;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100%;
+}
+.header--lang li:first-child a {
+  opacity: 0.6;
 }
 .header--bottom {
   height: 52px;
@@ -694,9 +726,74 @@ input {
 .header__nav--mobile .header__nav--mobile__title li p {
   max-inline-size: 82px;
 }
-.header__sub--mobile {
-  padding: 0 20px;
+.menu--mobile {
   display: none;
+  inline-size: 100%;
+  min-block-size: 100vh;
+  background-color: #fff;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+}
+.menu--mobile__header {
+  font-weight: 500;
+  background-color: #fafafa;
+}
+.menu--mobile__header .menu--mobile__acount {
+  padding: 16px 20px;
+}
+.menu--mobile .menu--mobile__header__close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.menu--mobile .menu--mobile__header__close .icon--close {
+  inline-size: 12px;
+  block-size: 12px;
+}
+.menu--mobile .acount .icon--user {
+  margin-right: 12px;
+}
+.menu--mobile__header__nav {
+  padding: 8px 0;
+}
+.menu--mobile__header__nav li {
+  cursor: pointer;
+}
+.menu--mobile__header__nav p {
+  display: inline-block;
+  max-width: min-content;
+  text-align: center;
+}
+.menu--mobile__header__list {
+  padding: 0 20px;
+}
+.menu--mobile__header__list li {
+  border: none;
+}
+.menu--mobile .login {
+  font-weight: 500;
+  padding: 24px 20px;
+}
+.menu--mobile .login__icon {
+  padding-right: 14px;
+}
+.menu--mobile .login__icon .icon--right {
+  width: 12px;
+  height: 15px;
+}
+.menu--mobile .login__icon--arrow {
+  margin-left: -8px;
+}
+.menu--mobile .login__icon--arrow .icon-23 {
+  inline-size: 6px;
+  block-size: 2.5px;
+}
+.menu--mobile .login__icon--arrow .icon-24 {
+  inline-size: 3px;
+  block-size: 3px;
+  margin-left: -1px;
 }
 .banner {
   padding: 0 32px;
@@ -811,13 +908,19 @@ input {
   }
   .banner__title {
     max-width: 100%;
+    padding-bottom: 50px;
+  }
+  .banner__title--content {
+    margin-top: 18px;
+  }
+  .banner__img .icon {
+    display: none;
   }
 }
 #main {
   padding-top: 25px;
 }
 .main__category {
-  margin-top: 140px;
   padding: 0 32px;
 }
 .main__category h2 {
@@ -854,26 +957,25 @@ input {
   position: relative;
 }
 .main__category--product .product__item h3 {
+  inline-size: 50%;
+  text-align: center;
   font-size: 28px;
   color: #637284;
-  position: relative;
-  left: 24px;
 }
 .main__category--product .product__item .here {
   color: #2d2d2d !important;
 }
 .main__category--product .product__item img {
-  width: 50%;
+  inline-size: 50%;
 }
 .main__category--product .product__item .icon {
   position: absolute;
-  left: -0.8rem;
+  left: 0;
   bottom: 0;
   width: 2.7rem;
   height: 2.7rem;
 }
 .main__category--extends {
-  margin-top: 140px;
   align-items: end;
 }
 .main__category--extends img:first-child {
@@ -916,7 +1018,6 @@ input {
   height: auto;
 }
 .main--best {
-  margin-top: 140px;
   padding: 0 32px;
 }
 .main--best h2 {
@@ -948,7 +1049,7 @@ input {
   left: 10px;
 }
 .main--best--product .product--item__inf {
-  padding: 0 12px;
+  padding-left: 12px;
 }
 .main--best--product .product--item__inf p:first-child {
   font-weight: 500;
@@ -960,7 +1061,6 @@ input {
 }
 .main--shop-jewell {
   position: relative;
-  margin: 160px 0 300px;
   padding: 0 32px;
 }
 .main--shop-jewell img {
@@ -1028,7 +1128,6 @@ input {
   font-weight: 700;
 }
 .main__rings {
-  margin-top: 260px;
   padding: 0 32px;
   gap: 4.2rem;
 }
@@ -1072,14 +1171,6 @@ input {
   font-weight: 700;
   line-height: 120%;
 }
-img.chains {
-  display: block;
-  position: relative;
-  right: -10%;
-  width: 100% !important;
-  height: auto;
-  z-index: -1;
-}
 .main__video {
   padding: 0 32px;
 }
@@ -1089,21 +1180,16 @@ img.chains {
 }
 .main__video--right {
   width: 100%;
-  min-height: 600px;
   position: relative;
 }
 .main__video--right img {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  inline-size: 100%;
 }
 .main__video--right .icon--ractangle {
   position: absolute;
   left: -7px;
-  bottom: -7px;
-  z-index: 0;
+  bottom: -2px;
+  z-index: -1;
   width: 300px;
   height: 300px;
 }
@@ -1246,7 +1332,7 @@ img.chains {
   overflow: hidden;
 }
 .main__title__img .image {
-  min-width: 800px;
+  min-width: 500px;
 }
 .main__title__img .image img {
   width: 100%;
@@ -1261,7 +1347,7 @@ img.chains {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -41px;
+  left: 32px;
 }
 .main__title__img .next {
   position: absolute;
@@ -1414,7 +1500,8 @@ img.chains {
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  width: 100%;
+  top: 0;
+  width: calc(100% - 32px);
   height: calc(100% + 30px);
   z-index: 2;
   background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 91.21%);
@@ -1427,10 +1514,22 @@ img.chains {
     width: 33.33333%;
   }
   .main__category--product .product__item {
-    min-inline-size: 300px;
+    min-inline-size: 160px;
+    border: 1px solid #dbdee6;
+  }
+  .main__category--product .product__item h3 {
+    font-size: 1.4rem;
+  }
+  .main__category--product .product__item .icon {
+    display: none;
+  }
+  .main__category--extends img:first-child {
+    width: 100%;
+    order: 2;
   }
   .main__category--extends .category--extends--desc {
     max-width: 100%;
+    margin: 0;
   }
   .main__category--extends .category--extends--right img {
     width: 100%;
@@ -1448,23 +1547,45 @@ img.chains {
   .main--shop-jewell .icon--vt14 {
     display: none;
   }
+  .main__banner {
+    padding-bottom: 60px;
+  }
   .main__banner__img img {
     min-inline-size: 100%;
-  }
-  .main__banner--desc {
-    padding-left: 32px;
   }
   .main__banner--desc div {
     max-width: 100%;
   }
+  .main__banner--desc .btn--sub {
+    padding: 12px 50px;
+  }
   .main__rings--desc .rectangle {
     display: none;
+  }
+  .main__set__topic--left {
+    order: 3;
+  }
+  .main__set__topic--left img {
+    padding-bottom: 0;
+  }
+  .main__set__topic--desc .form--desc__set {
+    max-inline-size: 100%;
+    padding-left: 0;
+  }
+  .main__set__topic--right {
+    max-width: 100%;
+  }
+  .main__set__topic--right img {
+    width: 100%;
+  }
+  .main__best--rings--wrap .main__best--rings__img {
+    order: 2;
   }
   .main__best--rings--wrap .main__best--rings .icon {
     display: none;
   }
   .main__desc {
-    display: unset;
+    display: block;
   }
   .main__title__img {
     position: relative;

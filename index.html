@@ -91,47 +91,44 @@
                         <li><a href="">Fr</a></li>
                         <li><a href="">It</a></li>
                     </ul>
-                    <div class="header--top--right__icon row">
-                        <!-- icon khi chua click nut menu -->
-                        <ul class="header--icon row row-center">
-                            <li class="header--icon--search row row-center">
-                                <svg class="icon icon--search">
+                    <!-- phan icon ngoai cung ben phai cua header -->
+                    <ul class="header--icon row row-center">
+                        <li class="header--icon--search row row-center">
+                            <svg class="icon icon--search">
+                                <use xlink:href="sprite.svg#Ellipse 1"></use>
+                            </svg>
+                            <svg class="icon icon--vt3">
+                                <use xlink:href="sprite.svg#Vector 3"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <a class="icon--user" href="">
+                                <svg class="icon icon--user--top">
                                     <use xlink:href="sprite.svg#Ellipse 1"></use>
                                 </svg>
-                                <svg class="icon icon--vt3">
-                                    <use xlink:href="sprite.svg#Vector 3"></use>
+                                <svg class="icon icon--user--bottom">
+                                    <use xlink:href="sprite.svg#Ellipse 2"></use>
                                 </svg>
-                            </li>
-                            <li>
-                                <a class="icon--user" href="">
-                                    <svg class="icon icon--user--top">
-                                        <use xlink:href="sprite.svg#Ellipse 1"></use>
-                                    </svg>
-                                    <svg class="icon icon--user--bottom">
-                                        <use xlink:href="sprite.svg#Ellipse 2"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <svg class="icon icon--heart">
-                                        <use xlink:href="sprite.svg#bordr"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="header--icon--bag" href="">
-                                    <svg class="icon header--icon--bag--top">
-                                        <use xlink:href="sprite.svg#Rectangle 50"></use>
-                                    </svg>
-                                    <svg class="icon header--icon--bag--down">
-                                        <use xlink:href="sprite.svg#Rectangle 248"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg class="icon icon--heart">
+                                    <use xlink:href="sprite.svg#bordr"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header--icon--bag" href="">
+                                <svg class="icon header--icon--bag--top">
+                                    <use xlink:href="sprite.svg#Rectangle 50"></use>
+                                </svg>
+                                <svg class="icon header--icon--bag--down">
+                                    <use xlink:href="sprite.svg#Rectangle 248"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- phan header phia dươi -->
@@ -150,21 +147,49 @@
                 </ul>
             </nav>
 
-            <!-- phan duoi cua menu mobile click menu -->
-            <div class="header__sub--mobile">
-                <!-- phan acount khi click menu mobile -->
-                <a class="acount row row-center">
-                    <div class="icon--user" href="">
-                        <svg class="icon icon--user--top">
-                            <use xlink:href="sprite.svg#Ellipse 1"></use>
-                        </svg>
-                        <svg class="icon icon--user--bottom">
-                            <use xlink:href="sprite.svg#Ellipse 2"></use>
-                        </svg>
+            <!-- phan cua menu mobile click menu btn -->
+            <div class="menu--mobile">
+                <!-- phan header cua menu -->
+                <div class="menu--mobile__header">
+                    <!-- phan acount khi click menu mobile -->
+                    <div class="menu--mobile__acount row row-center col-between">
+                        <a class="acount row row-center">
+                            <div class="icon--user" href="">
+                                <svg class="icon icon--user--top">
+                                    <use xlink:href="sprite.svg#Ellipse 1"></use>
+                                </svg>
+                                <svg class="icon icon--user--bottom">
+                                    <use xlink:href="sprite.svg#Ellipse 2"></use>
+                                </svg>
+                            </div>
+                            <p>My account</p>
+                        </a>
+                        <ul class="header--lang row row-center">
+                            <li><a href="">De</a></li>
+                            <li><a href="">Fr</a></li>
+                            <li><a href="">It</a></li>
+                        </ul>
+                        <!-- icon close khi click nut menu -->
+                        <div class="menu--mobile__header__close grid grid-center">
+                            <svg class="icon--close">
+                                <use xlink:href="sprite.svg#close-header"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <p>My account</p>
-                </a>
-                <ul class="header__sub--mobile__list banner__title--list">
+                    <!-- phan menu cua mobile -->
+                    <ul class="menu--mobile__header__nav grid l-4">
+                        <li class="grid grid-center">
+                            <p>Your Jewelry</p>
+                        </li>
+                        <li class="grid grid-center">
+                            <p>Engagement &Wedding</p>
+                        </li>
+                        <li class="grid grid-center">
+                            <p>Fashion &More...</p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="menu--mobile__header__list banner__title--list">
                     <li>
                         <a href="">
                             Men
@@ -206,31 +231,28 @@
                         </a>
                     </li>
                 </ul>
-                <!-- icon close khi click nut menu -->
-                <div class="header--close">
-                    <svg class="icon--close">
-                        <use xlink:href="sprite.svg#close-header"></use>
-                    </svg>
-                </div>
-                <!-- phan menu cua mobile -->
-                <div class="header__nav--mobile">
-                    <ul class="header__nav--mobile__title grid l-4">
-                        <li class="grid grid-center">
-                            <p>YourJewelry</p>
-                        </li>
-                        <li class="grid grid-center">
-                            <p>Engagement & Wedding</p>
-                        </li>
-                        <li class="grid grid-center">
-                            <p>Fashion & More...</p>
-                        </li>
-                    </ul>
-                </div>
+                <!-- phan login -->
+                <a class="login row row-center" href="">
+                    <div class="login__icon row row-center">
+                        <svg class="icon--right">
+                            <use xlink:href="sprite.svg#Rectangle 44"></use>
+                        </svg>
+                        <div class="login__icon--arrow row row-center">
+                            <svg class="icon-23">
+                                <use xlink:href="sprite.svg#Vector 23"></use>
+                            </svg>
+                            <svg class="icon-24">
+                                <use xlink:href="sprite.svg#Vector 24"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    Login
+                </a>
             </div>
         </header>
 
         <!-- khoi title va banner -->
-        <banner class="banner mt-24 grid l-6 m-12 c-12">
+        <banner class="banner mt-24 mt-80-m mt-80-c grid l-6 m-12 c-12">
             <!-- phan trang title ben trai -->
             <div class="banner__title">
                 <ul class="main__nav--list row">
@@ -243,7 +265,7 @@
                     <li><a href="">Home</a></li>
                 </ul>
 
-                <div class="banner__title--content">
+                <div class="banner__title--content mt-20-m mt-20-c">
                     <h1>RingsLorem ipsum dolor sit </h1>
                     <p>Aenean porttitor turpis quis nibh posuere, non malesuada leo ullamcorper. Aenean nec enim
                         tortor. In finibus enim sit amet odio convallis, quis malesuada urna gravida. </p>
@@ -283,7 +305,7 @@
         <!-- phan trang chu -->
         <main id="main">
             <!-- phan category -->
-            <section class="main__category">
+            <section class="main__category mt-140 mt-60-m mt-60-c">
                 <h2>Shop jewellery by category</h2>
                 <ul class="main__category__nav mt-32 row">
                     <li><a href="">Women</a></li>
@@ -292,28 +314,28 @@
                 </ul>
                 <!-- list san pham -->
                 <div class="main__category--product grid l-3">
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3>Necklaces</h3>
                         <img src="/assets/img/DBZDFBZ 1 (1).png" alt="product">
                         <svg class="icon">
                             <use xlink:href="sprite.svg#Vector 14s"></use>
                         </svg>
                     </a>
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3>Rings</h3>
                         <img src="/assets/img/DBZDFBZ 1 (2).png" alt="product">
                         <svg class="icon">
                             <use xlink:href="sprite.svg#Vector 14s"></use>
                         </svg>
                     </a>
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3 class="here">Earings</h3>
                         <img src="/assets/img/DBZDFBZ 2.png" alt="product">
                         <svg class="icon">
                             <use xlink:href="sprite.svg#Vector 14s"></use>
                         </svg>
                     </a>
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3>Bracelet</h3>
                         <img src="/assets/img/DCV A_.png" alt="product">
                         <svg class="icon">
@@ -323,8 +345,8 @@
                 </div>
 
                 <!-- phan phia duoi trong main__category -->
-                <div class="main__category--extends grid l-4 m-12 c-12">
-                    <img src="assets/img/DSC07793 1.png" alt="category img">
+                <div class="main__category--extends mt-140 mt-60-m mt-60-c grid l-4 m-12 c-12">
+                    <img class="mt-20-m mt-20-c" src="assets/img/DSC07793 1.png" alt="category img">
                     <div class="category--extends--desc">
                         <h2>Aenean porttitor turpis quis nibh posuere</h2>
                         <p>Donec accumsan feugiat nibh vitae fermentum. Donec nec bibendum sapien. Fusce in mattis
@@ -336,7 +358,7 @@
                             malesuada,
                             velit</p>
                     </div>
-                    <div class="category--extends--right">
+                    <div class="category--extends--right mt-20m mt-20-c">
                         <div class="rectangle">
                             <svg class="icon-l">
                                 <use xlink:href="sprite.svg#Rectangle 1394"></use>
@@ -351,9 +373,9 @@
             </section>
 
             <!-- phan best seller -->
-            <section class="main--best">
+            <section class="main--best mt-140 mt-60-m mt-60-c">
                 <h2>Best sellers</h2>
-                <div class="main--best--product grid l-2 m-6 c-6">
+                <div class="main--best--product grid l-2 m-4 c-6">
                     <a class="product--item product--item1" href="">
                         <div class="product--item__img">
                             <img src="/assets/img/option 6.png" alt="">
@@ -453,7 +475,7 @@
             </section>
 
             <!-- phan shop jewell -->
-            <section class="main--shop-jewell">
+            <section class="main--shop-jewell mt-160 mt-60-m mt-60-c">
                 <img src="assets/img/GLAMIRA_SYLVIE_2022_LOOK15_1627 1.png" alt="shop jewell">
                 <div class="shop-jewell__apply row row-center">
                     <div class="shop-jewell__apply--inf">
@@ -473,9 +495,9 @@
             </section>
 
             <!-- phan best sellers -->
-            <section class="main--best">
+            <section class="main--best mt-250 mt-60-m mt-60-c">
                 <h2>Best sellers</h2>
-                <div class="main--best--product grid l-2 m-6 c-6">
+                <div class="main--best--product grid l-2 m-4 c-6">
                     <a class="product--item product--item1" href="">
                         <div class="product--item__img">
                             <img src="/assets/img/option 6.png" alt="">
@@ -591,7 +613,7 @@
             </section>
 
             <!-- phan main rings -->
-            <section class="main__rings grid l-4 m-12 c-12">
+            <section class="main__rings mt-210 mt-80-m mt-80-c grid l-4 m-12 c-12">
                 <div class="main__rings--desc grid grid-row-center">
                     <div class="rectangle">
                         <svg class="icon-l">
@@ -632,7 +654,7 @@
             </section>
 
             <!-- phan best seller with 2 img-->
-            <section class="best-sellers__group mt-140">
+            <section class="best-sellers__group mt-140 mt-80-m mt-80-c">
                 <h2>Best sellers</h2>
                 <div class="best-sellers__group__img grid l-6 m-12 c-12">
                     <a href="">
@@ -647,32 +669,32 @@
             </section>
 
             <!-- phan category chains-->
-            <section class="main__category mt-140">
+            <section class="main__category mt-140 mt-80-m mt-80-c">
                 <h2>Shop jewellery by category</h2>
                 <!-- list san pham -->
                 <div class="main__category--product grid l-3">
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3>Chains</h3>
-                        <img class="chains" src="/assets/img/image 2.png" alt="product">
+                        <img src="/assets/img/DBZDFBZ 1 (1).png" alt="product">
                         <svg class="icon">
                             <use xlink:href="sprite.svg#Vector 14s"></use>
                         </svg>
                     </a>
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3>Rings</h3>
-                        <img src="/assets/img/DBZDFBZ 2 (1).png" alt="product">
-                        <svg class="icon">
-                            <use xlink:href="sprite.svg#Vector 14s"></use>
-                        </svg>
-                    </a>
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
-                        <h3 class="here">Earings</h3>
                         <img src="/assets/img/DBZDFBZ 1 (2).png" alt="product">
                         <svg class="icon">
                             <use xlink:href="sprite.svg#Vector 14s"></use>
                         </svg>
                     </a>
-                    <a class="product__item grid grid-row-center l-6 gap-15" href="">
+                    <a class="product__item grid grid-row-center l-6" href="">
+                        <h3 class="here">Earings</h3>
+                        <img src="/assets/img/DBZDFBZ 2.png" alt="product">
+                        <svg class="icon">
+                            <use xlink:href="sprite.svg#Vector 14s"></use>
+                        </svg>
+                    </a>
+                    <a class="product__item grid grid-row-center l-6" href="">
                         <h3>Bracelet</h3>
                         <img src="/assets/img/DCV A_.png" alt="product">
                         <svg class="icon">
@@ -683,7 +705,7 @@
             </section>
 
             <!-- phan rings video -->
-            <section class="main__video mt-160 grid grid-row-center l-4-8 m-12 c-12">
+            <section class="main__video mt-160 mt-80-m mt-80-c grid grid-row-center l-4-8 m-12 c-12">
                 <div class="main__video--desc">
                     <div class="form--desc">
                         <div class="form--desc--inf">
@@ -692,7 +714,7 @@
                                 enim
                                 tortor. In finibus enim sit amet odio convallis,</p>
                         </div>
-                        <a class="form--desc--link" href="">
+                        <a class="form--desc--link mt-40 mt-20-m mt-20-c" href="">
                             <p>View all</p>
                             <svg class="icon">
                                 <use xlink:href="sprite.svg#Vector 11"></use>
@@ -700,7 +722,7 @@
                         </a>
                     </div>
                 </div>
-                <a class="main__video--right" href="">
+                <a class="main__video--right mt-20-m mt-20-c" href="">
                     <svg class="icon icon--ractangle">
                         <use xlink:href="sprite.svg#Rectangle 1396"></use>
                     </svg>
@@ -717,9 +739,9 @@
             </section>
 
             <!-- phan best seller -->
-            <section class="main--best">
+            <section class="main--best mt-160 mt-80-m mt-80-c">
                 <h2>Best sellers</h2>
-                <div class="main--best--product grid l-2 m-6 c-6">
+                <div class="main--best--product grid l-2 m-4 c-6">
                     <a class="product--item product--item1" href="">
                         <div class="product--item__img">
                             <img src="/assets/img/option 6.png" alt="">
@@ -819,7 +841,7 @@
             </section>
 
             <!-- phan set voi topic -->
-            <section class="main__set__topic mt-160 grid gap-l grid-row-center l-2-5-5 m-12 c-12">
+            <section class="main__set__topic mt-160 mt-80-m mt-80-c grid gap-l grid-row-center l-2-5-5 m-12 c-12">
                 <div class="main__set__topic--left">
                     <div class="category--extends--right">
                         <img src="assets/img/DSC08005 1.png" alt="category img">
@@ -904,10 +926,10 @@
             </section>
 
             <!-- phan best seller cua rings -->
-            <section class="main__best--rings--wrap mt-210">
+            <section class="main__best--rings--wrap mt-210 mt-80-m mt-80-c">
                 <h2>Best sellers</h2>
-                <div class="main__best--rings mt-32 grid grid-row-center l-6 m-12 c-12">
-                    <div class="main__best--rings__img">
+                <div class="main__best--rings mt-32 mt-12-m mt-12-c grid grid-row-center l-6 m-12 c-12">
+                    <div class="main__best--rings__img mt-20-m mt-20-c">
                         <img src="assets/img/TD224349_final 1.png" alt="td final">
                     </div>
 
@@ -920,7 +942,7 @@
                                     enim
                                     tortor. In finibus enim sit amet odio convallis,</p>
                             </div>
-                            <a class="form--desc--link" href="">
+                            <a class="form--desc--link mt-40 mt-20-m mt-20-c" href="">
                                 <p>View all</p>
                                 <svg class="icon">
                                     <use xlink:href="sprite.svg#Vector 11"></use>
@@ -938,7 +960,7 @@
             </section>
 
             <!-- phan main voi van ban khong -->
-            <section class="main__desc mt-160">
+            <section class="main__desc mt-160 mt-80-m mt-80-c">
                 <div class="main__desc__title">
                     <h2>In luctus ullamcorper magna, eu luctus nibh molestie sit amet</h2>
                 </div>
@@ -963,7 +985,7 @@
             </section>
 
             <!-- phan main voi title -->
-            <section class="main__title mt-140">
+            <section class="main__title mt-140 mt-80-m mt-80-c">
                 <div class="main__title__head row row-end col-between">
                     <h2>Title</h2>
                     <a href="">View all</a>
@@ -1016,9 +1038,9 @@
             </section>
 
             <!-- phan list benefits -->
-            <section class="main__benefits mt-140">
+            <section class="main__benefits mt-140 mt-80-m mt-80-c">
                 <h2>Benefits</h2>
-                <div class="main__benefits__list mt-32 grid l-2--4 m-6 c-6">
+                <div class="main__benefits__list mt-32 grid l-2--4 m-4 c-6">
                     <a class="main__benefits__list__item row row-center col-center" href="">
                         <div class="list__item--wrap">
                             <div class="icon">
@@ -1109,7 +1131,7 @@
             </section>
 
             <!-- phan best seller with 2 img and icon next -->
-            <section class="best-sellers__group best-sellers__group--with--icon mt-140">
+            <section class="best-sellers__group best-sellers__group--with--icon mt-140 mt-80-m mt-80-c">
                 <h2>Best sellers</h2>
                 <div class="best-sellers__group__img grid l-6 m-12 c-12">
                     <a class="best-sellers__group__img--link" href="">
@@ -1138,7 +1160,7 @@
             </section>
 
             <!-- phan best seller with 4 img and icon -->
-            <section class="best-sellers--with--4img main__title mt-140">
+            <section class="best-sellers--with--4img main__title mt-140 mt-80-m mt-80-c">
                 <div class="main__title__head row row-end col-between">
                     <h2>Best sellers</h2>
                     <a href="">View all</a>
@@ -1215,7 +1237,7 @@
             </section>
 
             <!-- phan lien he cua main -->
-            <section class="main__contact mt-160 grid grid-center">
+            <section class="main__contact mt-160 mt-80-m mt-80-c grid grid-center">
                 <div class="rectangle rectangle__contact">
                     <svg class="icon-l">
                         <use xlink:href="sprite.svg#Rectangle 1394"></use>
@@ -1239,9 +1261,9 @@
             </section>
 
             <!-- phan best sellers voi cac san pham -->
-            <section class="main--best">
+            <section class="main--best mt-160 mt-80-m mt-80-c">
                 <h2>Best sellers</h2>
-                <div class="main--best--product grid l-2 m-6 c-6">
+                <div class="main--best--product grid l-2 m-4 c-6">
                     <a class="product--item product--item1" href="">
                         <div class="product--item__img">
                             <img src="/assets/img/option 6.png" alt="">
@@ -1341,7 +1363,7 @@
             </section>
 
             <!-- phan shop jewell duoi main -->
-            <section class="main--shop-jewell">
+            <section class="main--shop-jewell mt-140 mt-60-m mt-60-c">
                 <img src="assets/img/image 8.png" alt="shop jewell 8">
                 <div class="shop-jewell__apply row row-center">
                     <div class="shop-jewell__apply--inf">
@@ -1361,7 +1383,7 @@
             </section>
 
             <!-- phan main read seo-->
-            <section class="main__read main__desc mt-160">
+            <section class="main__read main__desc mt-250 mt-60-m mt-60-c">
                 <div class="main__desc__title">
                     <h2>SEO TEXT</h2>
                 </div>
@@ -1391,9 +1413,9 @@
             </section>
 
             <!-- phan recenly view -->
-            <section class="main__recenly main--best">
+            <section class="main__recenly main--best mt-160 mt-80-m mt-80-c">
                 <h2>Recently viewed</h2>
-                <div class="main--best--product grid l-2 m-6 c-6">
+                <div class="main--best--product grid l-2 m-4 c-6">
                     <a class="product--item product--item1" href="">
                         <div class="product--item__img">
                             <img src="/assets/img/option 6.png" alt="">

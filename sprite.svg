@@ -206,4 +206,17 @@
    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 2" id="Rectangle home">
     <rect x="0.600098" width="16.8" height="1.2" fill="#2D2D2D"></rect>
   </symbol>
+
+  <!-- mobile menu -->
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" id="Rectangle 44">
+    <path d="M10 1H1V13H2.76471H10" stroke="#EB6E79"></path>
+  </symbol>
+
+   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 2" id="Vector 23">
+    <path d="M0 1H5" stroke="#EB6E79"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 4" id="Vector 24">
+    <path d="M0.413911 0.585786L1.82812 2L0.413911 3.41421" stroke="#EB6E79"></path>
+  </symbol>
 </svg>

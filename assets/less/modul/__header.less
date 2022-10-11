@@ -31,6 +31,7 @@
       }
     }
   }
+  // phan nut menu tren header mobile
   .header__icon--mobile {
     .icon__home {
       padding-right: 16px;
@@ -57,25 +58,6 @@
 // phan header ben phai
 .header--top--right {
   flex: 1;
-  .header--lang {
-    a {
-      padding: 0 12px;
-      display: block;
-      position: relative;
-    }
-    li + li a::before {
-      content: "";
-      position: absolute;
-      height: 12px;
-      border-left: 1px solid @color-border;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 100%;
-    }
-    li:first-child a {
-      opacity: 0.6;
-    }
-  }
 
   .header--icon {
     width: 200px;
@@ -117,13 +99,24 @@
       }
     }
   }
-  .header--close {
-    cursor: pointer;
-    // display: none;
-    .icon--close {
-      inline-size: 12px;
-      block-size: 12px;
-    }
+}
+.header--lang {
+  a {
+    padding: 0 12px;
+    display: block;
+    position: relative;
+  }
+  li + li a::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    border-left: 1px solid @color-border;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+  }
+  li:first-child a {
+    opacity: 0.6;
   }
 }
 //   phan header nav phia duoi
@@ -162,10 +155,82 @@
     }
   }
 }
-// phan duoi cua menu mobile khi click vao menu
-.header__sub--mobile {
-  padding: 0 20px;
+// phan menu mobile khi click vao menu
+.menu--mobile {
   display: none;
+  inline-size: 100%;
+  min-block-size: 100vh;
+  background-color: @color-white;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  &__header {
+    font-weight: 500;
+    background-color: @color-blur;
+    .menu--mobile__acount {
+      padding: 16px 20px;
+    }
+  }
+  .menu--mobile__header__close {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    .icon--close {
+      inline-size: 12px;
+      block-size: 12px;
+    }
+  }
+  .acount {
+    .icon--user {
+      margin-right: 12px;
+    }
+  }
+
+  // phan nav cua menu mobile
+  &__header__nav {
+    padding: 8px 0;
+    li {
+      cursor: pointer;
+    }
+    p {
+      display: inline-block;
+      max-width: min-content;
+      text-align: center;
+    }
+  }
+
+  // phan list cua menu mobile
+  &__header__list {
+    padding: 0 20px;
+    li {
+      border: none;
+    }
+  }
+  // phan login
+  .login {
+    font-weight: 500;
+    padding: 24px 20px;
+    &__icon {
+      padding-right: 14px;
+      .icon--right {
+        width: 12px;
+        height: 15px;
+      }
+      &--arrow {
+        margin-left: -8px;
+        .icon-23 {
+          inline-size: 6px;
+          block-size: 2.5px;
+        }
+        .icon-24 {
+          inline-size: 3px;
+          block-size: 3px;
+          margin-left: -1px;
+        }
+      }
+    }
+  }
 }
 
 // phan banner
@@ -298,6 +363,16 @@
   // phan banner
   .banner__title {
     max-width: 100%;
+    padding-bottom: 50px;
+    &--content {
+      margin-top: 18px;
+    }
+  }
+
+  .banner__img {
+    .icon {
+      display: none;
+    }
   }
 }
 
