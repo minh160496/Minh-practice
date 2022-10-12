@@ -12,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/less/home.css" />
     <!-- <link rel="stylesheet" type="text/css" href="assets/less/view/view.css" /> -->
-    <script src="./assets/js/index.js"></script>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
                     <!-- header nav tren mobile -->
                     <div class="header--main__nav--mobile row">
                         <!-- icon home tren mobile -->
-                        <div class="icon__home">
+                        <div id="btn-menu" class="icon__home">
                             <svg class="icon">
                                 <use xlink:href="sprite.svg#Rectangle home"></use>
                             </svg>
@@ -146,7 +145,7 @@
             </nav>
 
             <!-- phan cua menu mobile click menu btn -->
-            <div class="menu--mobile">
+            <div id="menu--mobile-js" class="menu--mobile">
                 <!-- phan header cua menu -->
                 <div class="menu--mobile__header">
                     <!-- phan acount khi click menu mobile -->
@@ -168,13 +167,12 @@
                             <li><a href="">It</a></li>
                         </ul>
                         <!-- icon close khi click nut menu -->
-                        <div class="menu--mobile__header__close grid grid-center">
+                        <div id="btn-close" class="menu--mobile__header__close grid grid-center">
                             <svg class="icon--close">
                                 <use xlink:href="sprite.svg#close-header"></use>
                             </svg>
                         </div>
                     </div>
-                    <!-- phan menu cua mobile -->
                     <ul class="menu--mobile__header__nav grid l-4">
                         <li class="grid grid-center">
                             <p>Your Jewelry</p>
@@ -1784,5 +1782,6 @@
         </footer>
     </div>
 </body>
+<script src="./assets/js/index.js"></script>
 
 </html>

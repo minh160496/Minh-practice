@@ -165,6 +165,7 @@
   z-index: 6;
   top: 0;
   left: 0;
+  animation: show 0.3s ease-in forwards;
   &__header {
     font-weight: 500;
     background-color: @color-blur;
@@ -300,4 +301,26 @@
       margin-left: 16px;
     }
   }
+}
+
+// phan animation
+@keyframes show {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// phan js
+// class de hien menu mobile
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

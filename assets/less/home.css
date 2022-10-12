@@ -746,6 +746,7 @@ input {
   z-index: 6;
   top: 0;
   left: 0;
+  animation: show 0.3s ease-in forwards;
 }
 .menu--mobile__header {
   font-weight: 500;
@@ -857,6 +858,22 @@ input {
   .header--main__extends .extends--icon li + li a {
     margin-left: 16px;
   }
+}
+@keyframes show {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
 }
 #main {
   padding-top: 25px;
