@@ -19,81 +19,79 @@
     <div class="app">
         <header id="header">
             <!-- phan header phia tren -->
-            <div class="header--top row row-center col-between">
+            <div class="header--main row row-center col-between">
                 <!-- phan header ben trai -->
-                <div class="header--top--left">
+                <nav class="header--main__nav">
                     <ul class="row col-between">
                         <li><a href="">Jewelry</a></li>
                         <li><a href="">Engagement & Wedding</a></li>
                         <li><a href="">Fashion & more...</a></li>
                     </ul>
-                    <div class="header__icon--mobile">
-                        <div class="header__icon--mobile__item row">
-                            <!-- icon home tren mobile -->
-                            <div class="icon__home">
-                                <svg class="icon">
-                                    <use xlink:href="sprite.svg#Rectangle home"></use>
-                                </svg>
-                                <svg class="icon">
-                                    <use xlink:href="sprite.svg#Rectangle home"></use>
-                                </svg>
-                                <svg class="icon">
-                                    <use xlink:href="sprite.svg#Rectangle home"></use>
-                                </svg>
-                            </div>
-                            <!-- icon search tren mobile -->
-                            <div class="header--icon--search search--mobile row row-center">
-                                <svg class="icon icon--search">
-                                    <use xlink:href="sprite.svg#Ellipse 1"></use>
-                                </svg>
-                                <svg class="icon icon--vt3">
-                                    <use xlink:href="sprite.svg#Vector 3"></use>
-                                </svg>
-                            </div>
+                    <!-- header nav tren mobile -->
+                    <div class="header--main__nav--mobile row">
+                        <!-- icon home tren mobile -->
+                        <div class="icon__home">
+                            <svg class="icon">
+                                <use xlink:href="sprite.svg#Rectangle home"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="sprite.svg#Rectangle home"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="sprite.svg#Rectangle home"></use>
+                            </svg>
                         </div>
-
+                        <!-- icon search tren mobile -->
+                        <div class="extends--icon--search search--mobile row row-center">
+                            <svg class="icon icon--search">
+                                <use xlink:href="sprite.svg#Ellipse 1"></use>
+                            </svg>
+                            <svg class="icon icon--vt3">
+                                <use xlink:href="sprite.svg#Vector 3"></use>
+                            </svg>
+                        </div>
                     </div>
-                </div>
+                </nav>
                 <!-- phan header logo cty -->
-                <div class="header--name row col-center">
-                    <svg class="icon icon--name">
+                <div class="header__logo row col-center">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorG"></use>
                     </svg>
 
-                    <svg class="icon icon--name">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorL"></use>
                     </svg>
 
-                    <svg class="icon icon--name">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorA"></use>
                     </svg>
 
-                    <svg class="icon icon--name">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorM"></use>
                     </svg>
 
-                    <svg class="icon icon--name">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorI"></use>
                     </svg>
 
-                    <svg class="icon icon--name">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorR"></use>
                     </svg>
 
-                    <svg class="icon icon--name">
+                    <svg class="icon icon--text">
                         <use xlink:href="sprite.svg#VectorA"></use>
                     </svg>
                 </div>
                 <!-- phan header ben phai -->
-                <div class="header--top--right row col-between">
-                    <ul class="header--lang row row-center">
+                <div class="header--main__extends row col-between">
+                    <ul class="extends--lang row row-center">
                         <li><a href="">De</a></li>
                         <li><a href="">Fr</a></li>
                         <li><a href="">It</a></li>
                     </ul>
                     <!-- phan icon ngoai cung ben phai cua header -->
-                    <ul class="header--icon row row-center">
-                        <li class="header--icon--search row row-center">
+                    <ul class="extends--icon row row-center">
+                        <li class="extends--icon--search row row-center">
                             <svg class="icon icon--search">
                                 <use xlink:href="sprite.svg#Ellipse 1"></use>
                             </svg>
@@ -119,11 +117,11 @@
                             </a>
                         </li>
                         <li>
-                            <a class="header--icon--bag" href="">
-                                <svg class="icon header--icon--bag--top">
+                            <a class="extends--icon--bag" href="">
+                                <svg class="icon extends--icon--bag--top">
                                     <use xlink:href="sprite.svg#Rectangle 50"></use>
                                 </svg>
-                                <svg class="icon header--icon--bag--down">
+                                <svg class="icon extends--icon--bag--down">
                                     <use xlink:href="sprite.svg#Rectangle 248"></use>
                                 </svg>
                             </a>
@@ -132,8 +130,8 @@
                 </div>
             </div>
             <!-- phan header phia dươi -->
-            <nav class="header--bottom">
-                <ul class="header--bottom--nav row row-center">
+            <nav class="header--sub">
+                <ul class="header--sub__nav row row-center">
                     <li><a href="">Rings</a></li>
                     <li><a href="">Necklaces</a></li>
                     <li><a href="">Earings</a></li>
@@ -164,7 +162,7 @@
                             </div>
                             <p>My account</p>
                         </a>
-                        <ul class="header--lang row row-center">
+                        <ul class="extends--lang row row-center">
                             <li><a href="">De</a></li>
                             <li><a href="">Fr</a></li>
                             <li><a href="">It</a></li>
@@ -251,59 +249,58 @@
             </div>
         </header>
 
-        <!-- khoi title va banner -->
-        <banner class="banner mt-24 mt-80-m mt-80-c grid l-6 m-12 c-12">
-            <!-- phan trang title ben trai -->
-            <div class="banner__title">
-                <ul class="main__nav--list row">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">
-                            <svg class="icon icon--arrow">
-                                <use xlink:href="sprite.svg#arrow"></use>
-                            </svg>
-                        </a></li>
-                    <li><a href="">Home</a></li>
-                </ul>
-
-                <div class="banner__title--content mt-20-m mt-20-c">
-                    <h1>RingsLorem ipsum dolor sit </h1>
-                    <p>Aenean porttitor turpis quis nibh posuere, non malesuada leo ullamcorper. Aenean nec enim
-                        tortor. In finibus enim sit amet odio convallis, quis malesuada urna gravida. </p>
-                </div>
-                <ul class="banner__title--list">
-                    <li>
-                        <a href="">
-                            Engagement rings
-                            <svg class="icon">
-                                <use xlink:href="sprite.svg#Vector 11"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            men's rings
-                            <svg class="icon">
-                                <use xlink:href="sprite.svg#Vector 11"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- phan trang title ben phai -->
-            <div class="banner__img">
-                <img src="./assets/img/DSC08071 (1) 1.png" alt="image">
-                <svg class="icon icon--vt15">
-                    <use xlink:href="sprite.svg#Vector 15"></use>
-                </svg>
-                <svg class="icon icon--vt14">
-                    <use xlink:href="sprite.svg#Vector 14"></use>
-                </svg>
-            </div>
-        </banner>
-
         <!-- phan trang chu -->
         <main id="main">
+            <!-- khoi title va banner -->
+            <banner class="banner mt-24 mt-80-m mt-80-c grid l-6 m-12 c-12">
+                <!-- phan trang title ben trai -->
+                <div class="banner__title">
+                    <ul class="main__nav--list row">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="sprite.svg#arrow"></use>
+                                </svg>
+                            </a></li>
+                        <li><a href="">Home</a></li>
+                    </ul>
+
+                    <div class="banner__title--content mt-20-m mt-20-c">
+                        <h1>RingsLorem ipsum dolor sit </h1>
+                        <p>Aenean porttitor turpis quis nibh posuere, non malesuada leo ullamcorper. Aenean nec enim
+                            tortor. In finibus enim sit amet odio convallis, quis malesuada urna gravida. </p>
+                    </div>
+                    <ul class="banner__title--list">
+                        <li>
+                            <a href="">
+                                Engagement rings
+                                <svg class="icon">
+                                    <use xlink:href="sprite.svg#Vector 11"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                men's rings
+                                <svg class="icon">
+                                    <use xlink:href="sprite.svg#Vector 11"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- phan trang title ben phai -->
+                <div class="banner__img">
+                    <img src="./assets/img/DSC08071 (1) 1.png" alt="image">
+                    <svg class="icon icon--vt15">
+                        <use xlink:href="sprite.svg#Vector 15"></use>
+                    </svg>
+                    <svg class="icon icon--vt14">
+                        <use xlink:href="sprite.svg#Vector 14"></use>
+                    </svg>
+                </div>
+            </banner>
             <!-- phan category -->
             <section class="main__category mt-140 mt-60-m mt-60-c">
                 <h2>Shop jewellery by category</h2>
