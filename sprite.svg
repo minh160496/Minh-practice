@@ -257,4 +257,9 @@
    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4" id="Rectangle 52">
     <rect width="4" height="4" fill="#DBDEE6"></rect>
   </symbol>
+
+  <!-- icon menu mobile trang listing -->
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 11" id="down-mobile">
+    <path d="M1 1L21.1399 9L41 1" stroke="#DBDEE6" stroke-width="2"></path>
+  </symbol>
 </svg>
