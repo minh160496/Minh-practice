@@ -4,13 +4,13 @@ html {
 
 @media (max-width: 768px) {
   html {
-    font-size: 50%;
+    font-size: 50%; //tren mobile font-html nho hon
   }
 }
 
 @media (max-width: 420px) {
   html {
-    font-size: 42%;
+    font-size: 42%; //tren mobile man hinh dai nhu x-flip
   }
 }
 
@@ -18,12 +18,35 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: @color-background;
+  color: @text-color;
   font-size: @font-primary;
   font-family: @font-family;
   line-height: @line-height;
-  color: @text-color;
-  box-sizing: border-box;
-  background-color: @color-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  line-height: @line-height;
+}
+
+h2 {
+  font-size: @font-h2;
+  line-height: @line-height-120;
+}
+
+h3 {
+  font-size: @font-h3;
 }
 
 ul,
@@ -48,34 +71,6 @@ a {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-p + p {
-  margin-top: 32px;
-}
-
-h1 {
-  line-height: @line-height;
-}
-
-h2 {
-  font-size: @font-h2;
-  line-height: @line-height-120;
-}
-
-h3 {
-  font-size: @font-h3;
-}
-
 img {
   border-radius: @radius-s;
 }
@@ -84,4 +79,7 @@ input {
   border: none;
   outline: none;
   cursor: text;
+}
+p + p {
+  margin-top: 32px;
 }

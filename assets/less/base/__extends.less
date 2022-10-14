@@ -22,7 +22,43 @@
 .border--radius {
   border-radius: 2px;
 }
-// phan desc cos vew all
+
+.border--radius-s {
+  border-radius: 1px;
+}
+
+// box-shadow
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.box-shadow-product {
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+// hover
+.hover-blur {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.hover-up {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+.hover-scale {
+  transform: scale(105%);
+  transition: 0.3s;
+}
+
+// phan vi tri block o giua
+.block-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// phan desc co text "vew all"
 .form--desc {
   max-inline-size: 50rem;
   h1 {
@@ -47,9 +83,11 @@
       height: 12px;
       padding-left: 12px;
     }
+    &:hover {
+      .hover-blur();
+    }
   }
 }
-
 // phan ractangle
 .rectangle {
   position: relative;
@@ -70,7 +108,6 @@
     left: -27%;
   }
 }
-
 // phan nut next va pre
 .next {
   cursor: pointer;
@@ -118,6 +155,10 @@
   cursor: pointer;
   border-radius: 2px;
   font-weight: 700;
+  &:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+  }
 }
 
 .btn--primary {
@@ -147,7 +188,6 @@
     top: 47%;
   }
 }
-
 // icon back
 .icon--back {
   position: relative;
@@ -167,7 +207,6 @@
     left: -2px;
   }
 }
-
 // icon close
 .close {
   position: absolute;
@@ -185,6 +224,9 @@
   }
 }
 
+.icon--close {
+  cursor: pointer;
+}
 // icon change
 .icon--change {
   width: 16px;
@@ -236,7 +278,6 @@
     }
   }
 }
-
 // icon save
 .icon--save {
   width: 18px;
@@ -259,7 +300,6 @@
     transform: translate(-50%, -50%);
   }
 }
-
 // icon last
 .icon--last {
   width: 15px;
@@ -305,7 +345,6 @@
     }
   }
 }
-
 // icon facebook
 .icon--social {
   width: 40px;
@@ -343,7 +382,6 @@
     right: 33%;
   }
 }
-
 // icon home menu
 .icon__home {
   display: grid;
@@ -355,7 +393,6 @@
     height: 6px;
   }
 }
-
 // icon search
 .extends--icon--search {
   position: relative;
@@ -374,17 +411,62 @@
   }
 }
 
-// phan responsive
-@media (min-width: 1024px) {
+// phan cua trang listing
+// quay icon
+.rotate-90 {
+  transform: rotate(-90deg);
+}
+.rotate90 {
+  transform: rotate(90deg) !important;
+}
+// icon question
+.icon-question {
+  inline-size: 14px;
+  block-size: 14px;
+  display: grid;
+  place-content: center;
+  .border-s();
+  .border--radius-s();
+  .icon {
+    width: 4px;
+    height: 6px;
+  }
+}
+// icon checkbox
+.checkbox {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin-right: 8px;
+  opacity: 0.3;
+  .icon-round {
+    width: 16px;
+    height: 16px;
+    .block-center();
+  }
+  .icon-dot {
+    display: none;
+    width: 8px;
+    height: 8px;
+    .block-center();
+  }
 }
 
+.checkbox.checkbox--now {
+  opacity: 1;
+  .icon-dot {
+    display: block;
+  }
+}
+
+// phan responsive
 @media (min-width: 769px) and (max-width: 1023px) {
   .form--desc {
-    max-inline-size: 100%;
+    max-inline-size: 100%; //tren mobile full tren hang rieng
   }
 
   .rectangle {
-    display: none;
+    display: none; //icon nay an tren mobile
   }
 }
 

@@ -1,7 +1,20 @@
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
+  .grid.f-24 {
+    grid-template-columns: repeat(5, 1fr); //5 cot tren kich thuoc man hinh nay
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439) {
+  .grid.e-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+  .grid.m-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .grid.m-12 {
     grid-template-columns: 1fr;
   }
@@ -18,12 +31,20 @@
     inline-size: 100%;
   }
 
+  .mt-10-m {
+    margin-top: 10px;
+  }
+
   .mt-12-m {
     margin-top: 12px;
   }
 
   .mt-20-m {
     margin-top: 20px;
+  }
+
+  .mt-40-m {
+    margin-top: 40px;
   }
 
   .mt-60-m {
@@ -36,6 +57,10 @@
 }
 
 @media (max-width: 768px) {
+  .grid.c-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .grid.c-12 {
     grid-template-columns: 1fr;
   }
@@ -48,12 +73,20 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .mt-10-c {
+    margin-top: 10px;
+  }
+
   .mt-12-c {
     margin-top: 12px;
   }
 
   .mt-20-c {
     margin-top: 20px;
+  }
+
+  .mt-40-c {
+    margin-top: 40px;
   }
 
   .mt-60-c {

@@ -1,25 +1,25 @@
 #main {
   padding-top: 25px;
 }
-// phan banner
-.banner {
+// phan main__section--general
+.main__section--general {
   padding: 0 @padding-main;
 }
-.banner__title {
+.main__section--text {
   max-width: 466px;
-  .main__nav--list {
+  .main__section__post--link {
     li:first-child a {
       padding-left: 0 !important;
     }
     a {
       padding: 0 10px;
       .icon {
-        width: 0.5rem;
-        height: 0.6rem;
+        width: 5px;
+        height: 5px;
       }
     }
   }
-  &--content {
+  &__content {
     margin-top: 120px;
     h1 {
       font-size: @font-h1;
@@ -34,7 +34,7 @@
       margin-bottom: 62px;
     }
   }
-  &--list {
+  &--link {
     border-top: 1px solid @color-border;
     a {
       display: inline-block;
@@ -42,8 +42,12 @@
       height: 100%;
       padding: 18px 0;
       font-weight: 700;
-      border-bottom: 1px solid @color-border;
+      .border--bottom-s;
       text-transform: uppercase;
+      &:hover {
+        color: @color-category-product;
+        transition: 0.3s;
+      }
       .icon {
         width: 10px;
         height: 10px;
@@ -89,7 +93,9 @@
       place-content: center;
       width: 12.5rem;
       .border--bottom-s();
-
+      a:hover {
+        .hover-blur();
+      }
       &:last-child {
         border-color: @color-red;
       }
@@ -103,6 +109,11 @@
     }
     .product__item {
       position: relative;
+      .box-shadow-product();
+      transition: 0.3s;
+      &:hover {
+        .hover-up();
+      }
       h3 {
         inline-size: 50%;
         text-align: center;
@@ -179,6 +190,13 @@
     margin: 0;
   }
   &--product {
+    .product--item {
+      .box-shadow-product();
+      transition: 0.3s;
+      &:hover {
+        .hover-up();
+      }
+    }
     margin-top: 4rem;
     .product--item__img {
       position: relative;
@@ -188,15 +206,15 @@
         height: 100%;
       }
       .icon--heart {
-        width: 1.6rem;
-        height: 1.4rem;
+        width: 16px;
+        height: 14px;
         position: absolute;
         top: 10px;
         right: 10px;
       }
       .icon--diamon {
-        width: 2rem;
-        height: 1.2rem;
+        width: 20px;
+        height: 12px;
         position: absolute;
         bottom: 14px;
         left: 10px;
@@ -264,7 +282,7 @@
   }
 }
 
-// phan banner
+// phan main__section--general
 .main__banner {
   background-color: @background-toppic-red;
   margin-top: 160px;
@@ -334,6 +352,13 @@
   }
   .best-sellers__group__img {
     gap: @gap-xl;
+
+    a {
+      transition: 0.5s;
+      &:hover {
+        .hover-scale();
+      }
+    }
     img {
       width: 100%;
     }
@@ -342,10 +367,6 @@
       line-height: @line-height-120;
     }
   }
-}
-
-// phan category chains
-img.chains {
 }
 
 // phan rings video
@@ -413,6 +434,7 @@ img.chains {
       padding-left: 36px;
     }
     li {
+      transition: 0.3s;
       a {
         .wrap--icon {
           position: relative;
@@ -447,6 +469,10 @@ img.chains {
             font-weight: 500;
           }
         }
+      }
+
+      &:hover {
+        .hover-up();
       }
     }
   }
@@ -551,14 +577,14 @@ img.chains {
       transform: translateY(-50%);
     }
   }
-  // phan position
-  .position {
-    .icon--pos {
-      cursor: pointer;
-      width: 4px;
-      height: 4px;
-      padding: 0 2px;
-    }
+}
+// phan position trong main__title
+.position {
+  .icon--pos {
+    cursor: pointer;
+    width: 4px;
+    height: 4px;
+    padding: 0 2px;
   }
 }
 
@@ -571,6 +597,11 @@ img.chains {
   &__list__item {
     position: relative;
     background-color: @light-pink;
+    .box-shadow-product();
+    transition: 0.3s;
+    &:hover {
+      .hover-up();
+    }
     .list__item--wrap {
       padding: 34px 24px;
     }
@@ -739,11 +770,11 @@ img.chains {
 }
 
 @media (max-width: 1023px) {
-  // phan banner
-  .banner__title {
+  // phan main__section--general
+  .main__section--text {
     max-width: 100%;
     padding-bottom: 50px;
-    &--content {
+    &__content {
       margin-top: 18px;
     }
   }
@@ -816,7 +847,7 @@ img.chains {
     }
   }
 
-  // phan banner
+  // phan main__section--general
   .main__banner {
     padding-bottom: 60px;
     &__img {

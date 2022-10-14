@@ -17,9 +17,16 @@
     height: 100%;
     li {
       height: 100%;
+      &:hover a {
+        .hover-blur();
+      }
     }
     li:first-child {
       position: relative;
+      a {
+        opacity: 1;
+        cursor: default;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -105,6 +112,9 @@
     padding: 0 12px;
     display: block;
     position: relative;
+    &:hover {
+      .hover-blur();
+    }
   }
   li + li a::before {
     content: "";
@@ -116,7 +126,8 @@
     right: 100%;
   }
   li:first-child a {
-    opacity: 0.6;
+    cursor: default;
+    opacity: 0.6 !important;
   }
 }
 //   phan header nav phia duoi
@@ -166,6 +177,7 @@
   top: 0;
   left: 0;
   animation: show 0.3s ease-in forwards;
+  font-size: 1.75rem;
   &__header {
     font-weight: 500;
     background-color: @color-blur;
@@ -191,6 +203,7 @@
   // phan nav cua menu mobile
   &__header__nav {
     padding: 8px 0;
+    font-size: 1.5rem;
     li {
       cursor: pointer;
     }
